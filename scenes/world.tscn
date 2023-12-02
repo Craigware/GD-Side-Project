@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://iw43bfts5kym"]
+
+[ext_resource type="Script" path="res://assets/background/scripts/background.cs" id="1_msjmt"]
+[ext_resource type="Texture2D" uid="uid://c4vdvpgl1njqt" path="res://assets/background/images/Layer 1.png" id="2_pid5j"]
+[ext_resource type="Texture2D" uid="uid://cujluwk5bte4r" path="res://assets/background/images/Rectangle 1.png" id="3_d080e"]
+[ext_resource type="Texture2D" uid="uid://gxgway1rddc7" path="res://assets/background/images/Rectangle 2.png" id="4_72otb"]
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Node" parent="."]
+script = ExtResource("1_msjmt")
+backgroundLayers = Array[Texture2D]([ExtResource("2_pid5j"), ExtResource("4_72otb"), ExtResource("3_d080e")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,2 +1,2 @@
 # GD-Side-Project
-Godot Sidescrolling space shooter
+Godot Side scrolling space shooter
