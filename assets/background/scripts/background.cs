@@ -15,7 +15,6 @@ public partial class background : Node
 
     public override void _Ready()
     {
-        GD.Print("1");
         layers = Tex2DsToSprites(backgroundLayers);
     }
 
