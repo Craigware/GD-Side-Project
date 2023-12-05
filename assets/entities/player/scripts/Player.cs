@@ -25,10 +25,7 @@ namespace Entity
 			if (inputsEnabled)
 			{
 				// Actions
-				if (@event.IsActionPressed("shoot"))
-				{
-					GD.Print(direction);
-				}
+				if (@event.IsActionPressed("shoot")){ weapon.Shoot(); }
 
 				// Movement
 				if (@event.IsActionPressed("left")) { direction.X = -1; }
