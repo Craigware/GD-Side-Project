@@ -1,0 +1,11 @@
+[gd_scene load_steps=6 format=3 uid="uid://bem2qvq66oji8"]
+
+[ext_resource type="Script" path="res://assets/background/scripts/background.cs" id="1_2gh67"]
+[ext_resource type="Texture2D" uid="uid://cuum7baxj1s0x" path="res://assets/background/images/Sky2.png" id="2_3i3j0"]
+[ext_resource type="Texture2D" uid="uid://chy57o6pykm72" path="res://assets/background/images/Sky1.png" id="3_miavw"]
+[ext_resource type="Texture2D" uid="uid://bqqdrxt2rqucl" path="res://assets/background/images/Distant Sand dunes.png" id="4_es1qw"]
+[ext_resource type="Texture2D" uid="uid://nqfnceup1mgv" path="res://assets/background/images/Sand Dunes.png" id="5_ew8t4"]
+
+[node name="Background" type="Node"]
+script = ExtResource("1_2gh67")
+backgroundLayers = [ExtResource("2_3i3j0"), ExtResource("3_miavw"), ExtResource("4_es1qw"), ExtResource("5_ew8t4")]

@@ -1,16 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://iw43bfts5kym"]
+[gd_scene load_steps=5 format=3 uid="uid://cxij6ao8hh24b"]
 
-[ext_resource type="Script" path="res://assets/background/scripts/background.cs" id="1_msjmt"]
-[ext_resource type="Texture2D" uid="uid://cuum7baxj1s0x" path="res://assets/background/images/Sky2.png" id="2_w2c0p"]
-[ext_resource type="Texture2D" uid="uid://chy57o6pykm72" path="res://assets/background/images/Sky1.png" id="3_033il"]
-[ext_resource type="Texture2D" uid="uid://bqqdrxt2rqucl" path="res://assets/background/images/Distant Sand dunes.png" id="4_jtl7g"]
-[ext_resource type="Texture2D" uid="uid://nqfnceup1mgv" path="res://assets/background/images/Sand Dunes.png" id="5_kb28c"]
-[ext_resource type="PackedScene" uid="uid://b8k3iel8sa704" path="res://assets/player.tscn" id="6_kbsfk"]
+[ext_resource type="PackedScene" uid="uid://bem2qvq66oji8" path="res://assets/background/background.tscn" id="1_amsvj"]
+[ext_resource type="PackedScene" uid="uid://c1visnulc7wx7" path="res://assets/entities/player/player.tscn" id="2_ewg4x"]
+[ext_resource type="Script" path="res://assets/entities/generic/scripts/Weapon.cs" id="3_ekcg1"]
+
+[sub_resource type="Resource" id="Resource_g0pxm"]
+script = ExtResource("3_ekcg1")
+FireRate = 0
+Damage = 0
+WeaponType = 0
 
 [node name="World" type="Node2D"]
 
-[node name="Background" type="Node" parent="."]
-script = ExtResource("1_msjmt")
-backgroundLayers = [ExtResource("2_w2c0p"), ExtResource("3_033il"), ExtResource("4_jtl7g"), ExtResource("5_kb28c")]
+[node name="Environment" type="Node" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("6_kbsfk")]
+[node name="Background" parent="Environment" instance=ExtResource("1_amsvj")]
+
+[node name="Entities" type="Node" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("2_ewg4x")]
+weapon = SubResource("Resource_g0pxm")

@@ -30,6 +30,8 @@ project/assembly_name="Space_Side_Scroller"
 
 folder_colors={
 "res://assets/": "blue",
+"res://assets/entities/enemies/": "red",
+"res://assets/entities/generic/": "purple",
 "res://scenes/": "orange"
 }
 
