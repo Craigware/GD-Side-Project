@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://chy57o6pykm72" path="res://assets/background/images/Sky1.png" id="3_033il"]
 [ext_resource type="Texture2D" uid="uid://bqqdrxt2rqucl" path="res://assets/background/images/Distant Sand dunes.png" id="4_jtl7g"]
 [ext_resource type="Texture2D" uid="uid://nqfnceup1mgv" path="res://assets/background/images/Sand Dunes.png" id="5_kb28c"]
-[ext_resource type="Texture2D" uid="uid://mbb3jexnekje" path="res://assets/background/images/Ground.png" id="6_8naj4"]
+[ext_resource type="PackedScene" uid="uid://b8k3iel8sa704" path="res://assets/player.tscn" id="6_kbsfk"]
 
 [node name="World" type="Node2D"]
 
@@ -13,7 +13,4 @@
 script = ExtResource("1_msjmt")
 backgroundLayers = [ExtResource("2_w2c0p"), ExtResource("3_033il"), ExtResource("4_jtl7g"), ExtResource("5_kb28c")]
 
-[node name="Ground" type="Sprite2D" parent="."]
-z_index = 100
-texture = ExtResource("6_8naj4")
-centered = false
+[node name="Player" parent="." instance=ExtResource("6_kbsfk")]
