@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://x05g461mo5mj"]
+
+[ext_resource type="Script" path="res://assets/entities/generic/scripts/Stats.cs" id="1_anlnp"]
+
+[resource]
+script = ExtResource("1_anlnp")
+Health = 100
+Speed = 500

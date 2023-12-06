@@ -13,14 +13,13 @@ config_version=5
 config/name="Space_Side_Scroller"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/entities/generic/images/icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
-window/stretch/aspect="ignore"
 
 [dotnet]
 
@@ -32,6 +31,8 @@ folder_colors={
 "res://assets/": "blue",
 "res://assets/entities/enemies/": "red",
 "res://assets/entities/generic/": "purple",
+"res://assets/entities/manages/": "pink",
+"res://saves/": "green",
 "res://scenes/": "orange"
 }
 

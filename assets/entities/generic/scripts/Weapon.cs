@@ -27,11 +27,10 @@ namespace Entity
             WeaponType = weaponType;
         }
 
-        public void Shoot()
+        public void Shoot(CharacterBody2D gunman)
         {
             void ShootBasic()
             {
-
             }
 
             switch(WeaponType)

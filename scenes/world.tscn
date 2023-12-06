@@ -2,13 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bem2qvq66oji8" path="res://assets/background/background.tscn" id="1_amsvj"]
 [ext_resource type="PackedScene" uid="uid://c1visnulc7wx7" path="res://assets/entities/player/player.tscn" id="2_ewg4x"]
-[ext_resource type="Script" path="res://assets/entities/generic/scripts/Weapon.cs" id="3_ekcg1"]
-
-[sub_resource type="Resource" id="Resource_g0pxm"]
-script = ExtResource("3_ekcg1")
-FireRate = 0
-Damage = 0
-WeaponType = 0
+[ext_resource type="Resource" uid="uid://x05g461mo5mj" path="res://assets/entities/player/resources/PlayerStatistics.tres" id="3_tacgh"]
+[ext_resource type="Resource" uid="uid://cn4qt42frsi3m" path="res://assets/entities/player/resources/BasicWeapon.tres" id="4_1ejwt"]
 
 [node name="World" type="Node2D"]
 
@@ -16,7 +11,11 @@ WeaponType = 0
 
 [node name="Background" parent="Environment" instance=ExtResource("1_amsvj")]
 
+[node name="Projectiles" type="Node" parent="Environment" groups=["Managers"]]
+
 [node name="Entities" type="Node" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("2_ewg4x")]
-weapon = SubResource("Resource_g0pxm")
+position = Vector2(640, 352)
+stats = ExtResource("3_tacgh")
+weapon = ExtResource("4_1ejwt")
