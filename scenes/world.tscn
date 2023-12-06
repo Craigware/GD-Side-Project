@@ -15,7 +15,8 @@
 
 [node name="Entities" type="Node" parent="."]
 
-[node name="Player" parent="Entities" instance=ExtResource("2_ewg4x")]
+[node name="Player" parent="Entities" node_paths=PackedStringArray("bulletLayer") instance=ExtResource("2_ewg4x")]
 position = Vector2(640, 352)
 stats = ExtResource("3_tacgh")
 weapon = ExtResource("4_1ejwt")
+bulletLayer = NodePath("../../Environment/Projectiles")

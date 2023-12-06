@@ -7,6 +7,7 @@ namespace Entity
 	{
         [Export] public Stats stats;
         [Export] public Weapon weapon;
+        [Export] public Node bulletLayer;
 
         private bool inputsEnabled = true;
 		private Vector2 direction = new();
@@ -16,7 +17,7 @@ namespace Entity
 		{
 			if (inputsEnabled)
 			{
-				if (@event.IsActionPressed("shoot")){ weapon.Shoot(this); }
+				if (@event.IsActionPressed("shoot")){ Shoot(); }
 			}
 		}
 
@@ -31,6 +32,25 @@ namespace Entity
 		{
             ReadDirectionalInput();
             MovePosition(direction, delta);
+        }
+
+
+        public void Shoot()
+        {
+            switch (this.weapon.WeaponType)
+            {
+                case Weapon.WeaponTypes.BASIC:
+                    _ShootBasic();
+                    break;
+            }
+            
+            void _ShootBasic()
+            {
+                Node2D _baseBullet = (Node2D)ResourceLoader.Load<PackedScene>("res://assets/entities/generic/bullet.tscn").Instantiate();
+                _baseBullet.Position = Position;
+                _baseBullet.ZIndex = 101;
+                bulletLayer.AddChild(_baseBullet);
+            }
         }
 
 

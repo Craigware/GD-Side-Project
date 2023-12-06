@@ -1,4 +1,5 @@
 using Godot;
+using Managers;
 using System;
 using System.Text.RegularExpressions;
 
@@ -25,32 +26,6 @@ namespace Entity
             FireRate = fireRate;
             Damage = damage;
             WeaponType = weaponType;
-        }
-
-        public void Shoot(CharacterBody2D gunman)
-        {
-            void ShootBasic()
-            {
-            }
-
-            switch(WeaponType)
-            {
-                case WeaponTypes.BASIC:
-                    ShootBasic();
-                    break;
-                // case WeaponTypes.SPREAD:
-                //     this ShootSpread();
-                //     break;
-                // case WeaponTypes.BEAM:
-                //     this.ShootBeam();
-                //     break;
-                // case WeaponTypes.CHARGE:
-                //     this.ShootCharge();
-                //     break;
-                default:
-                    GD.Print("How did you manage to have a type that isn't in the enum?");
-                    throw new Exception("Error: Weapon Type is not valid.");
-            }
         }
     }
 }
